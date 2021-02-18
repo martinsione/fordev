@@ -1,0 +1,19 @@
+.container {
+  display: grid;
+  height: 100%;
+  place-content: center;
+  place-items: center;
+}
+.container h1 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  margin-bottom: 1rem;
+}
+.container h3 {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  margin-bottom: 1rem;
+}
+.img {
+  width: 100px;
+}
