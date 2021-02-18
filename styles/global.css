@@ -1,20 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 :root {
-
   /* Colors */
-  --black         : #000000;
-  --white         : #ffffff;
-  --primary       : #0049ff;
-  --secondary     : #0099ff;
+  --black: #000000;
+  --white: #ffffff;
+  --primary: #0049ff;
+  --secondary: #0099ff;
 
-  --bg-primary    : #fafafa;
-  --bg-secondary  : #0099ff44;
+  --bg-primary: #fafafa;
+  --bg-secondary: #0099ff44;
 
-  --shadow-primary: 0 10px 25px rgba(0,0,0,0.1);
+  --shadow-primary: 0 10px 25px rgba(0, 0, 0, 0.1);
 
   /* Fonts */
-  --font-main: 'Inter', sans-serif;
+  --font-main: "Inter", sans-serif;
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
@@ -36,7 +35,6 @@
   --font-semibold: 600;
   --font-bold: 700;
   --font-extrabold: 800;
-
 }
 
 * {
@@ -46,9 +44,11 @@
 }
 
 body {
-  background-image:
-    radial-gradient( var(--bg-secondary) 1px, var(--bg-primary) 1px),
-    radial-gradient( var(--bg-secondary) 1px, var(--bg-primary) 1px);
+  background-image: radial-gradient(
+      var(--bg-secondary) 1px,
+      var(--bg-primary) 1px
+    ),
+    radial-gradient(var(--bg-secondary) 1px, var(--bg-primary) 1px);
   background-position: 0 0, 25px 25px;
   background-size: 50px 50px;
 }
