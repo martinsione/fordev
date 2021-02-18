@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react"
-import style from "../styles/Home.module.css"
-import Button from "../components/Button"
-import Github from "../components/Icons/Github"
+import style from "styles/Home.module.css"
+import Button from "components/Button"
+import Github from "components/Icons/Github"
+import Avatar from "components/Avatar"
 
-import { loginWithGithub, onAuthStateChanged } from "../firebase/client"
+import { loginWithGithub, onAuthStateChanged } from "firebase/client"
 
 export default function Home() {
   const [user, setUser] = useState(undefined)
@@ -30,9 +31,7 @@ export default function Home() {
       )}
       {user && (
         <div>
-          <img src={user.avatar} alt="" />
-          <br />
-          <h3>{user.username}</h3>
+          <Avatar src={user.avatar} text={user.username} />
         </div>
       )}
     </section>
