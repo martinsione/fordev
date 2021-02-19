@@ -24,7 +24,7 @@ const mapDataFromFirebaseAuthToUserObject = (user) => {
 
 export const onAuthStateChanged = (onChange) => {
   return firebase.auth().onAuthStateChanged((user) => {
-    const userObject = mapDataFromFirebaseAuthToUserObject(user)
+    const userObject = user ? mapDataFromFirebaseAuthToUserObject(user) : null
     onChange(userObject)
   })
 }
