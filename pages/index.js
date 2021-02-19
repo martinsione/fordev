@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react"
-import style from "styles/Home.module.css"
+import style from "styles/Index.module.css"
 import Button from "components/Button"
 import Github from "components/Icons/Github"
 import Avatar from "components/Avatar"
 
 import { loginWithGithub, onAuthStateChanged } from "firebase/client"
 
-export default function Home() {
+export default function Index() {
   const [user, setUser] = useState(undefined)
 
   useEffect(() => {
