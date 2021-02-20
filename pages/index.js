@@ -2,38 +2,40 @@ import { useState, useEffect } from "react"
 import style from "styles/Index.module.css"
 import Button from "components/Button"
 import Github from "components/Icons/Github"
-import Avatar from "components/Avatar"
 
-import { loginWithGithub, onAuthStateChanged } from "firebase/client"
+import useUser, { USER_STATE } from "hooks/useUser"
+import { loginWithGithub } from "firebase/client"
+import { useRouter } from "next/router"
 
 export default function Index() {
-  const [user, setUser] = useState(undefined)
+  const user = useUser()
+  const router = useRouter()
 
   useEffect(() => {
-    onAuthStateChanged(setUser)
-  }, [])
+    user && router.replace("/home")
+  }, [user])
 
   const handleClick = () => {
-    loginWithGithub()
-      .then(setUser)
-      .catch((err) => console.log(err))
+    loginWithGithub().catch((err) => console.log(err))
   }
   return (
-    <section className={style.container}>
-      <img src="/fordevs-logo.png" alt="fordevs logo" className={style.img} />
-      <h1>ForDevs</h1>
-      <h3>Talk about development with devlopers</h3>
-      {user === null && (
-        <Button onClick={handleClick}>
-          <Github fill={"#fff"} width={24} height={24} />
-          Login with Github
-        </Button>
+    <>
+      {user === USER_STATE.LOADING && <div></div>}
+      {user === USER_STATE.NOT_LOGGED && (
+        <section className={style.container}>
+          <img
+            src="/fordevs-logo.png"
+            alt="fordevs logo"
+            className={style.img}
+          />
+          <h1>ForDevs</h1>
+          <h3>Talk about development with devlopers</h3>
+          <Button onClick={handleClick}>
+            <Github fill={"#fff"} width={20} height={20} />
+            Login with Github
+          </Button>
+        </section>
       )}
-      {user && (
-        <div>
-          <Avatar src={user.avatar} text={user.username} />
-        </div>
-      )}
-    </section>
+    </>
   )
 }
