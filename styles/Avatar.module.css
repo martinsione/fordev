@@ -1,14 +1,6 @@
-.container {
-  align-items: center;
-  display: flex;
-}
 .avatar {
+  align-items: center;
   border-radius: 50%;
+  display: flex;
   width: 49px;
-}
-.avatar + .text {
-  margin-left: 0.5rem;
-}
-.text {
-  font-weight: var(--font-semibold);
 }
