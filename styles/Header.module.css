@@ -1,0 +1,14 @@
+.container {
+  align-items: center;
+  background-color: var(--white);
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  height: 49px;
+  padding: 0 0.2rem;
+  position: sticky;
+  top: 0;
+}
+.text {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+}
