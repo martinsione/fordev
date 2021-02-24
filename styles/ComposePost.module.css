@@ -1,0 +1,15 @@
+.container {
+  flex: 1;
+  padding: 1rem;
+}
+.textarea {
+  border: none;
+  border-radius: 0.5rem;
+  font-size: var(--text-lg);
+  height: 200px;
+  line-height: var(--post-lineheight);
+  outline: 0;
+  padding: 0.2rem;
+  resize: none;
+  width: 100%;
+}
