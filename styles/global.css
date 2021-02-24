@@ -7,6 +7,9 @@
   --primary: #0049ff;
   --secondary: #0099ff;
 
+  --text-dark: #222;
+  --text-darkgray: #777;
+
   --bg-primary: #fafafa;
   --bg-secondary: #0099ff44;
 
@@ -35,9 +38,12 @@
   --font-semibold: 600;
   --font-bold: 700;
   --font-extrabold: 800;
+
+  --post-lineheight: 1.3125;
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: var(--font-main);
