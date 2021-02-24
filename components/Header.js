@@ -1,9 +1,10 @@
 import style from "styles/Header.module.css"
 
-export default function Header() {
+export default function Header({ children, title }) {
   return (
     <header className={style.container}>
-      <h3 className={style.text}>Inicio</h3>
+      {children}
+      <h3 className={style.text}>{title}</h3>
     </header>
   )
 }
