@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import Head from "next/head"
 import Layout from "components/Layout"
 import Header from "components/Header"
@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps, title }) {
   const user = useUser()
 
   useEffect(() => {
-    user === null && router.replace("/")
+    user === USER_STATE.NOT_LOGGED && router.replace("/")
   }, [user])
 
   return (
@@ -22,7 +22,9 @@ function MyApp({ Component, pageProps, title }) {
       <Head>{title}</Head>
       <Layout>
         {user && <Header title={title} />}
-        <Component {...pageProps} />
+        <div style={{ flex: 1 }}>
+          <Component {...pageProps} />
+        </div>
         {user && <Navbar />}
       </Layout>
     </>
