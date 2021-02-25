@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { formatDate } from "./useDateTimeFormat"
+import { DEFAULT_LANGUAGE } from "constants/locale"
 
 const isRelativeTimeFormatSupported =
   typeof Intl !== "undefined" && Intl.RelativeTimeFormat
@@ -41,7 +42,7 @@ export default function useTimeAgo(timestamp) {
     return formatDate(timestamp)
   }
 
-  const rtf = new Intl.RelativeTimeFormat("es", { style: "short" })
+  const rtf = new Intl.RelativeTimeFormat(DEFAULT_LANGUAGE, { style: "narrow" })
 
   const { value, unit } = timeago
 
