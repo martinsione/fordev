@@ -3,10 +3,15 @@
   display: flex;
   padding: 0.5rem 0.7rem;
 }
+.container:hover {
+  background-color: #f5f8fa;
+  cursor: pointer;
+}
 .avatar {
   margin-right: 0.5rem;
 }
 .text span {
+  align-items: center;
   display: flex;
   margin-bottom: 0.5rem;
 }
@@ -20,6 +25,10 @@
   align-self: center;
   color: var(--text-darkgray);
   font-size: var(--text-sm);
+  text-decoration: none;
+}
+.createdAt:hover {
+  text-decoration: underline;
 }
 .content {
   color: var(--text-dark);
