@@ -12,11 +12,11 @@ export default function Navbar() {
           <Create width={32} height={32} stroke="#09f" />
         </a>
       </Link>
-      <Link href="/home">
+      {/* <Link href="/search">
         <a>
           <Search width={32} height={32} stroke="#09f" />
         </a>
-      </Link>
+      </Link> */}
       <Link href="/home">
         <a>
           <Home width={32} height={32} stroke="#09f" />
