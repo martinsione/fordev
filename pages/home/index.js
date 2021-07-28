@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Head from 'next/head'
 
 import Post from "components/Post"
 import useUser from "hooks/useUser"
@@ -21,6 +22,9 @@ export default function HomePage({ children }) {
 
   return (
     <>
+      <Head>
+        <title>Home - Fordev</title>
+      </Head>
       {timeline.map(({ avatar, createdAt, id, name, content, username }) => {
         return (
           <Post

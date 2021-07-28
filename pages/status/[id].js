@@ -1,6 +1,7 @@
 import Post from "components/Post"
 import { firestore } from "firebase/admin"
 import { useRouter } from "next/router"
+import Head from 'next/head'
 
 export default function IndividualPost(props) {
   const router = useRouter()
@@ -9,6 +10,7 @@ export default function IndividualPost(props) {
 
   return (
     <>
+      <Head><title>Status - Fordev</title></Head>
       <Post {...props} />
     </>
   )

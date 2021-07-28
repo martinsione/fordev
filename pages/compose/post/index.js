@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useRouter } from "next/router"
+import Head from 'next/head'
 
 import Button from "components/Button"
 import Avatar from "components/Avatar"
@@ -47,6 +48,9 @@ export default function ComposePost() {
 
   return (
     <>
+      <Head>
+        <title>Compose - Fordev</title>
+      </Head>
       {user && (
         <section className={style.container}>
           <Avatar />

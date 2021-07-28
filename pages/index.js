@@ -6,6 +6,7 @@ import Github from "components/Icons/Github"
 import useUser, { USER_STATE } from "hooks/useUser"
 import { loginWithGithub } from "firebase/client"
 import { useRouter } from "next/router"
+import Head from 'next/head'
 
 export default function Index() {
   const user = useUser()
@@ -20,6 +21,9 @@ export default function Index() {
   }
   return (
     <>
+      <Head>
+        <title>Fordev</title>
+      </Head>
       {user === USER_STATE.LOADING && <div></div>}
       {user === USER_STATE.NOT_LOGGED && (
         <section className={style.container}>
