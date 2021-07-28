@@ -13,13 +13,6 @@ export default function HomePage({ children }) {
     user && fetchLatestPosts().then(setTimeline)
   }, [user])
 
-  const POST_STATES = {
-    ERROR: -1,
-    UNDEFINED: 0,
-    LOADING: 1,
-    SUCCESS: 2,
-  }
-
   return (
     <>
       <Head>
