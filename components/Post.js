@@ -30,7 +30,9 @@ export default function Post({
         <span>
           <h4 className={style.username}>{username}</h4>
           <Link href={`/status/${id}`}>
-            <a className={style.createdAt}><time>{timeago}</time></a>
+            <a className={style.createdAt}>
+              <time>{timeago}</time>
+            </a>
           </Link>
         </span>
         <p className={style.content}>{content}</p>

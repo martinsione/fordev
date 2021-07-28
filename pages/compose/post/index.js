@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useRouter } from "next/router"
-import Head from 'next/head'
+import Head from "next/head"
 
 import Button from "components/Button"
 import Avatar from "components/Avatar"

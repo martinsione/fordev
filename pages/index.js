@@ -6,7 +6,7 @@ import Github from "components/Icons/Github"
 import useUser, { USER_STATE } from "hooks/useUser"
 import { loginWithGithub } from "firebase/client"
 import { useRouter } from "next/router"
-import Head from 'next/head'
+import Head from "next/head"
 
 export default function Index() {
   const user = useUser()
