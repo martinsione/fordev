@@ -9,7 +9,7 @@ import "styles/global.css"
 import useUser, { USER_STATE } from "hooks/useUser"
 import { useRouter } from "next/router"
 
-function MyApp({ Component, pageProps, title }) {
+function MyApp({ Component, pageProps }) {
   const router = useRouter()
   const user = useUser()
 
@@ -19,9 +19,8 @@ function MyApp({ Component, pageProps, title }) {
 
   return (
     <>
-      <Head>{title}</Head>
       <Layout>
-        {user && <Header title={title} />}
+        {user && <Header title={"fordev"} />}
         <div style={{ flex: 1 }}>
           <Component {...pageProps} />
         </div>
