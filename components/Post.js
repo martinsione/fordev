@@ -1,6 +1,6 @@
 import Avatar from "components/Avatar"
 import style from "styles/Post.module.css"
-// import useTimeAgo from "hooks/useTimeAgo"
+import useTimeAgo from "hooks/useTimeAgo"
 import Link from "next/link"
 import { useRouter } from "next/router"
 
@@ -12,7 +12,7 @@ export default function Post({
   uid,
   username,
 }) {
-  // const timeago = useTimeAgo(createdAt)
+  const timeago = useTimeAgo(createdAt)
 
   const router = useRouter()
 
@@ -30,7 +30,7 @@ export default function Post({
         <span>
           <h4 className={style.username}>{username}</h4>
           <Link href={`/status/${id}`}>
-            <a className={style.createdAt}>{/* <time>{timeago}</time> */}</a>
+            <a className={style.createdAt}><time>{timeago}</time></a>
           </Link>
         </span>
         <p className={style.content}>{content}</p>
